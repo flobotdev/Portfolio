@@ -1,0 +1,52 @@
+.skills-section {
+  --font-sans: "IBM Plex Mono", monospace;
+  margin-bottom: 5rem;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skills-group h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111;
+}
+
+.skills-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-group li {
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  color: #444;
+}
+
+.skills-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-group li {
+  background: #f3f3f3;
+  padding: 0.35rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+}
+
+.skills-group li:hover {
+  color: #111;
+}
+

@@ -1,0 +1,93 @@
+.experience-card {
+  --font-sans: "IBM Plex Mono", monospace;
+  border: 1px solid #424242;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  --font-sans: "IBM Plex Mono", monospace; /* new font */
+}
+
+.title {
+  font-weight: 500;
+  color: rgb(199, 50, 50);
+}
+.company {
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.dates {
+  font-size: 0.9rem;
+  color: #2c2c2c;
+  white-space: nowrap;
+  font-weight: 400; /* regular for dates */
+}
+
+.experience-category {
+  margin-top: 1.25rem;
+  border-radius: 8px;
+  --font-sans: "IBM Plex Mono", monospace; /* new font */
+}
+
+.experience-category h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.experience-category ul {
+  padding-left: 1.25rem;
+}
+
+.experience-category li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.experience-category {
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.experience-category summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center; /* ensures chevron stays aligned with text */
+  gap: 0.5rem;
+  font-weight: 600; /* semibold for category title */
+  font-family: inherit; /* keep same font as container */
+}
+
+.experience-category summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-category summary h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Chevron */
+.experience-category summary::before {
+  content: "▸";
+  transition: transform 0.2s ease;
+  display: inline-block; /* ensures alignment with text baseline */
+  line-height: 1; /* keep chevron vertically centered */
+}
+
+.experience-category[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.experience-category ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  font-weight: 400; /* regular for bullets */
+  line-height: 1.5;
+}

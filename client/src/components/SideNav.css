@@ -1,0 +1,102 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 700px;
+  width: 200px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(224, 216, 195);
+  --font-sans: "IBM Plex Mono", monospace;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.side-nav-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8rem;
+  margin-left: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 2rem;
+}
+
+.nav-links li {
+  margin-bottom: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a.active {
+  color: rgb(199, 50, 50);
+  font-weight: 600;
+}
+
+.nav-links .dash {
+  margin-right: 0.25rem;
+}
+
+/* Bottom buttons */
+.side-nav-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-nav-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; /* floating above bottom */
+}
+
+.side-nav-button-contact {
+  right: 1rem;
+  bottom: 6rem;
+}
+
+.bottom-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #131212;
+  color: #dacba6;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.bottom-btn-icon:hover {
+  background-color: #e0c06e;
+  color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-btn-icon svg {
+  width: 18px;
+  height: 18px;
+}

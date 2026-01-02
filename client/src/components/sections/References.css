@@ -1,0 +1,20 @@
+.ref-title {
+  font-weight: 500;
+  margin: 0;          /* remove default top/bottom margin */
+  font-size: 0.9rem;   /* slightly smaller than name */
+  line-height: 1.2;    /* tighter line spacing */
+}
+
+.ref-name {
+  color: rgb(199, 50, 50);
+  margin: 0;          /* remove default top/bottom margin */
+  margin-top: 0.25rem; /* small space between name and title */
+}
+
+.ref-card {
+  --font-sans: "IBM Plex Mono", monospace;
+  border: 1px solid #424242;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
