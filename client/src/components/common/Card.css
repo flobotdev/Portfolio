@@ -1,0 +1,111 @@
+.card {
+  background: #cdcdcd;
+  border: 1px solid #424242;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: "IBM Plex Mono", monospace;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(199, 50, 50, 0.15);
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(199, 50, 50);
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.card-image-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card-image-maximize {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.card-image-container:hover .card-image-maximize {
+  opacity: 1;
+}
+
+.card-image-maximize:hover {
+  background: rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.card-content {
+  color: #2c2c2c;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.card-content p {
+  margin: 0 0 1rem 0;
+}
+
+.card-content p:last-child {
+  margin-bottom: 0;
+}
+
+.card-content ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.card-content ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.card-content ul:last-child {
+  margin-bottom: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -51,7 +51,3 @@ portfolio/
 Copyright © 2026 Florina Panaite. All Rights Reserved.
 
 This code and all associated files are proprietary and confidential. Unauthorized copying, modification, distribution, or use of this software, via any medium, is strictly prohibited without explicit written permission from the copyright holder.
-
-## Author
-
-Florina Panaite

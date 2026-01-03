@@ -1,14 +1,35 @@
-import ModCarousel from "./steammods/ModsSection"
-import { dayzMods } from "../../data/steammods";
-import { dayzCollabMods } from "../../data/steammods";
+import { Link } from "react-router-dom";
+import "./Projects.css";
+import projects from "../../data/projects";
 
 function Projects() {
   return (
     <section id="projects" className="skills-section">
       <div>
-        <h2>DayZ Mods</h2>
-        <ModCarousel title="Published Mods" initialMods={dayzMods} />
-        <ModCarousel title="Collaborations" initialMods={dayzCollabMods} />
+        <h2>Projects</h2>
+        <p className="section-intro">
+          A showcase of my work across game development, web applications, and
+          innovative platforms.
+        </p>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <div key={project.id} className="project-card">
+              <h3>{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <div className="project-tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link to={project.path} className="project-link-btn">
+                View Project →
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

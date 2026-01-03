@@ -1,4 +1,5 @@
 import "./CarouselCard.css";
+import LinkButton from "../../common/LinkButton";
 
 export default function CarouselCard({ mod, offset }) {
   // VARIABLES
@@ -25,15 +26,17 @@ export default function CarouselCard({ mod, offset }) {
       }}
     >
       <div className="carousel-card-image-container">
-        <img src={mod.stats?.preview || mod.image} alt={mod.name} />
-        <a
+        <img
+          src={mod.stats?.preview || mod.image}
+          alt={mod.name}
+          loading="lazy"
+        />
+        <LinkButton
           href={`https://steamcommunity.com/sharedfiles/filedetails/?id=${mod.id}`}
-          target="_blank"
-          rel="noopener noreferrer"
           className="mod-link-btn"
         >
           View on Steam
-        </a>
+        </LinkButton>
       </div>
       <div className="carousel-card-stats">
         <h3>{mod.name}</h3>
