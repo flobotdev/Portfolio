@@ -40,7 +40,7 @@ function ProjectLuna() {
       </div>
 
       <div className="cards-grid">
-        <Card title="Inventory system" image="/images/Luna/inventory3.png">
+        <Card title="Inventory system" image="/images/luna/inventory3.png">
           <ul>
             <li>Single slot grid based</li>
             <li>Vicinity</li>
@@ -53,7 +53,7 @@ function ProjectLuna() {
             <li>Replace</li>
           </ul>
         </Card>
-        <Card title="Interact system" image="/images/Luna/interact3.png">
+        <Card title="Interact system" image="/images/luna/interact3.png">
           <ul>
             <li>Ability to interact with items on ground</li>
             <li>Ability to interact with storage, crafting benches, etc.</li>
@@ -63,7 +63,7 @@ function ProjectLuna() {
             </li>
           </ul>
         </Card>
-        <Card title="Crafting system" image="/images/Luna/crafting2.png">
+        <Card title="Crafting system" image="/images/luna/crafting2.png">
           <ul>
             <li>
               Customizable DataTable list of recipes for each crafting bench
@@ -75,7 +75,7 @@ function ProjectLuna() {
             <li>Progress bar to show the remaining time to craft one item</li>
           </ul>
         </Card>
-        <Card title="Loot spawning system" image="/images/Luna/lootsystem.png">
+        <Card title="Loot spawning system" image="/images/luna/lootsystem.png">
           <ul>
             <li>Ability to search containers for loot with randomized loot</li>
             <li>Customizable categories of loot for each container</li>
@@ -89,7 +89,7 @@ function ProjectLuna() {
             </li>
           </ul>
         </Card>
-        <Card title="Mission system" image="/images/Luna/questsystem1.png">
+        <Card title="Mission system" image="/images/luna/questsystem1.png">
           <ul>
             <li>Main story missions that are automatically accepted</li>
             <li>Side missions acceptable from a board</li>
@@ -104,7 +104,7 @@ function ProjectLuna() {
         </Card>
         <Card
           title="Hideout upgrade system"
-          image="/images/Luna/construction_all.png"
+          image="/images/luna/construction_all.png"
         >
           <ul>
             <li>

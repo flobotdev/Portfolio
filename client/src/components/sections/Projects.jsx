@@ -8,8 +8,7 @@ function Projects() {
       <div>
         <h2>Projects</h2>
         <p className="section-intro">
-          A showcase of my work across game development, web applications, and
-          innovative platforms.
+          A showcase of my work across game development and web applications.
         </p>
 
         <div className="projects-grid">
