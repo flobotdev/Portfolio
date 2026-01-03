@@ -195,7 +195,8 @@
     transition: transform 0.3s ease;
     width: 280px;
     height: 100vh;
-    padding: 3rem 1rem 2rem;
+    padding: 2rem 1rem 5rem;
+    overflow-y: auto;
   }
 
   .side-nav.mobile-open {
@@ -204,5 +205,21 @@
 
   .nav-name {
     margin-bottom: 3rem;
+  }
+
+  .side-nav-btn-container {
+    margin-top: auto;
+    padding-bottom: 3rem;
+  }
+
+  .side-nav-buttons {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    justify-content: center;
+  }
+
+  .bottom-btn-icon {
+    display: inline-flex !important;
   }
 }
