@@ -21,6 +21,7 @@ const sections = [
 function SideNav() {
   const [activeId, setActiveId] = useState("hero");
   const [expandedSection, setExpandedSection] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -75,136 +76,160 @@ function SideNav() {
     }
   };
 
-  return (
-    <nav className="side-nav">
-      <div className="side-nav-top">
-        <h1 className="nav-name">FLORINA PANAITE</h1>
-        <ul className="nav-links">
-          {sections.map((section) => (
-            <li key={section.id}>
-              {section.subItems ? (
-                <>
-                  {isOnSubPage ? (
-                    <button
-                      className={`nav-link-btn ${
-                        activeId === section.id ? "active" : ""
-                      }`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigate(`/#${section.id}`);
-                      }}
-                    >
-                      {activeId === section.id && (
-                        <span className="dash">— </span>
-                      )}
-                      {section.label}
-                      <span
-                        className="expand-icon"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          handleSectionClick(section);
-                        }}
-                      >
-                        {expandedSection === section.id ? "▼" : "▶"}
-                      </span>
-                    </button>
-                  ) : (
-                    <a
-                      href={`#${section.id}`}
-                      className={activeId === section.id ? "active" : ""}
-                      onClick={(e) => {
-                        document
-                          .getElementById(section.id)
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      {activeId === section.id && (
-                        <span className="dash">— </span>
-                      )}
-                      {section.label}
-                      <span
-                        className="expand-icon"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          handleSectionClick(section);
-                        }}
-                      >
-                        {expandedSection === section.id ? "▼" : "▶"}
-                      </span>
-                    </a>
-                  )}
-                  {expandedSection === section.id && (
-                    <ul className="sub-nav-links">
-                      {section.subItems.map((subItem) => (
-                        <li key={subItem.id}>
-                          <Link
-                            to={subItem.path}
-                            className={activeId === subItem.id ? "active" : ""}
-                          >
-                            {activeId === subItem.id && (
-                              <span className="dash">— </span>
-                            )}
-                            {subItem.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </>
-              ) : isOnSubPage ? (
-                <button
-                  className={`nav-link-btn ${
-                    activeId === section.id ? "active" : ""
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigate(`/#${section.id}`);
-                  }}
-                >
-                  {activeId === section.id && <span className="dash">— </span>}
-                  {section.label}
-                </button>
-              ) : (
-                <a
-                  href={`#${section.id}`}
-                  className={activeId === section.id ? "active" : ""}
-                >
-                  {activeId === section.id && <span className="dash">— </span>}
-                  {section.label}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
+  const handleNavItemClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
-      <div className="side-nav-btn-container">
-        <div className="side-nav-button-contact">
-          <Button
-            href={linkedButtons.find((l) => l.label === "Email")?.href}
-            showIcon
-          >
-            Get in touch
-          </Button>
+  return (
+    <>
+      <button
+        className="mobile-menu-toggle"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav className={`side-nav ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+        <div className="side-nav-top">
+          <h1 className="nav-name">FLORINA PANAITE</h1>
+          <ul className="nav-links">
+            {sections.map((section) => (
+              <li key={section.id}>
+                {section.subItems ? (
+                  <>
+                    {isOnSubPage ? (
+                      <button
+                        className={`nav-link-btn ${
+                          activeId === section.id ? "active" : ""
+                        }`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate(`/#${section.id}`);
+                        }}
+                      >
+                        {activeId === section.id && (
+                          <span className="dash">— </span>
+                        )}
+                        {section.label}
+                        <span
+                          className="expand-icon"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleSectionClick(section);
+                          }}
+                        >
+                          {expandedSection === section.id ? "▼" : "▶"}
+                        </span>
+                      </button>
+                    ) : (
+                      <a
+                        href={`#${section.id}`}
+                        className={activeId === section.id ? "active" : ""}
+                        onClick={(e) => {
+                          document
+                            .getElementById(section.id)
+                            ?.scrollIntoView({ behavior: "smooth" });
+                          handleNavItemClick();
+                        }}
+                      >
+                        {activeId === section.id && (
+                          <span className="dash">— </span>
+                        )}
+                        {section.label}
+                        <span
+                          className="expand-icon"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleSectionClick(section);
+                          }}
+                        >
+                          {expandedSection === section.id ? "▼" : "▶"}
+                        </span>
+                      </a>
+                    )}
+                    {expandedSection === section.id && (
+                      <ul className="sub-nav-links">
+                        {section.subItems.map((subItem) => (
+                          <li key={subItem.id}>
+                            <Link
+                              to={subItem.path}
+                              className={
+                                activeId === subItem.id ? "active" : ""
+                              }
+                              onClick={handleNavItemClick}
+                            >
+                              {activeId === subItem.id && (
+                                <span className="dash">— </span>
+                              )}
+                              {subItem.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : isOnSubPage ? (
+                  <button
+                    className={`nav-link-btn ${
+                      activeId === section.id ? "active" : ""
+                    }`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(`/#${section.id}`);
+                    }}
+                  >
+                    {activeId === section.id && (
+                      <span className="dash">— </span>
+                    )}
+                    {section.label}
+                  </button>
+                ) : (
+                  <a
+                    href={`#${section.id}`}
+                    className={activeId === section.id ? "active" : ""}
+                    onClick={handleNavItemClick}
+                  >
+                    {activeId === section.id && (
+                      <span className="dash">— </span>
+                    )}
+                    {section.label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="side-nav-buttons">
-          {linkedButtons.map((btn) => (
-            <a
-              key={btn.label}
-              href={btn.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bottom-btn-icon"
-              aria-label={btn.label}
+
+        <div className="side-nav-btn-container">
+          <div className="side-nav-button-contact">
+            <Button
+              href={linkedButtons.find((l) => l.label === "Email")?.href}
+              showIcon
             >
-              {btn.icon}
-            </a>
-          ))}
+              Get in touch
+            </Button>
+          </div>
+          <div className="side-nav-buttons">
+            {linkedButtons.map((btn) => (
+              <a
+                key={btn.label}
+                href={btn.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bottom-btn-icon"
+                aria-label={btn.label}
+              >
+                {btn.icon}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 
