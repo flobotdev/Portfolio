@@ -13,6 +13,9 @@ export default function ModCarousel({ title, initialMods }) {
 
   useEffect(() => {
     async function fetchStats(mod) {
+      // Skip if already has stats
+      if (mod.stats) return;
+
       try {
         const res = await fetch(
           `${process.env.REACT_APP_API_URL}/api/steam/${mod.id}`
@@ -26,8 +29,8 @@ export default function ModCarousel({ title, initialMods }) {
       }
     }
 
-    mods.forEach(fetchStats);
-  }, [mods]);
+    initialMods.forEach(fetchStats);
+  }, [initialMods]);
 
   return (
     <div className="mod-carousel-section">
