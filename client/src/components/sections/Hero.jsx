@@ -1,13 +1,20 @@
 function Hero() {
   return (
     <section id="hero">
-        <div className="hero-title">
-          <span className="blink-square" /> 
-          <div className="red-title"> Open to New Opportunities</div>
-        </div>
-        <p>
-        Gameplay programmer with a strong background in Unreal Engine and a prior career in .NET development. I specialize in building modular systems, UI frameworks, and designer-friendly tools using C++ and Blueprints. My work spans features like dialogue systems, interaction logic, and in-game computers, always with an emphasis on clean, extensible code. Before moving into games, I spent 7.5 years working on enterprise applications and internal tooling in C#. 
-        </p>
+      <div className="hero-title">
+        <span className="blink-square" />
+        <div className="red-title"> Open to New Opportunities</div>
+      </div>
+      <p>
+        Detail-oriented software engineer with over 11 years of experience in C#
+        and C++, specializing in building maintainable systems and tools. My
+        career includes 7.5 years in .NET development working on enterprise
+        applications and internal tooling, followed by game programming in
+        Unreal Engine 5, where I focus on modular gameplay systems, UI
+        frameworks, and designer-friendly tools. Comfortable working in
+        fast-paced, deadline-driven environments with an emphasis on clean,
+        extensible code.
+      </p>
     </section>
   );
 }

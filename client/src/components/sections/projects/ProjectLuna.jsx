@@ -75,7 +75,7 @@ function ProjectLuna() {
             <li>Progress bar to show the remaining time to craft one item</li>
           </ul>
         </Card>
-        <Card title="Loot spawning system" image="/images/luna/lootsystem.png">
+        <Card title="Loot spawning system" image="/images/luna/lootsystem.PNG">
           <ul>
             <li>Ability to search containers for loot with randomized loot</li>
             <li>Customizable categories of loot for each container</li>

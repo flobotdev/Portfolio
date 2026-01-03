@@ -2,7 +2,7 @@ function ExperienceCategory({ category }) {
   const { name, points } = category;
 
   return (
-    <details className="experience-category">      
+    <details className="experience-category">
       <summary>
         <h4>{name}</h4>
       </summary>
@@ -24,8 +24,13 @@ function ExperienceCard({ role }) {
       <header className="experience-header">
         <div>
           <h3 className="title">{title}</h3>
-          <p className="company">{company} | {startDate} — {endDate}</p>
-        </div>        
+          <div className="location">
+            <p className="company">{company} |</p>
+            <p className="dates">
+              {startDate} — {endDate}
+            </p>
+          </div>
+        </div>
       </header>
       <div className="experience-body">
         {categories.map((category, index) => (
