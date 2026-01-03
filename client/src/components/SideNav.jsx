@@ -2,7 +2,7 @@ import "./SideNav.css";
 import { useEffect, useState } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 
-import Button from "./Button";
+import ContactButton from "./ContactButton";
 import linkedButtons from "../data/links";
 import projects from "../data/projects";
 
@@ -206,12 +206,12 @@ function SideNav() {
 
         <div className="side-nav-btn-container">
           <div className="side-nav-button-contact">
-            <Button
+            <ContactButton
               href={linkedButtons.find((l) => l.label === "Email")?.href}
               showIcon
             >
               Get in touch
-            </Button>
+            </ContactButton>
           </div>
           <div className="side-nav-buttons">
             {linkedButtons.map((btn) => (
