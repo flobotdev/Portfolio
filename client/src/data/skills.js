@@ -1,7 +1,17 @@
 const skills = [
   {
     category: "Languages",
-    items: ["C++", "C#", "SQL", "PowerShell", "Batch", "Bash", "HTML", "CSS", "JavaScript"],
+    items: [
+      "C++",
+      "C#",
+      "SQL",
+      "PowerShell",
+      "Batch",
+      "Bash",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
   },
   {
     category: "Game Development",
@@ -16,7 +26,14 @@ const skills = [
   },
   {
     category: "Backend & Web",
-    items: ["REST API", "WebAPI", "MVC Web Apps"],
+    items: [
+      "REST API",
+      "WebAPI",
+      "MVC Web Apps",
+      "Node.js",
+      "Express.js",
+      "React",
+    ],
   },
   {
     category: "Cloud & Services",
