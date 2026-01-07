@@ -13,6 +13,16 @@
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mod-carousel-section {
+    padding: 2rem 0;
+  }
+}
+
 /* ===== Carousel Wrapper ===== */
 .carousel-wrapper {
   position: relative;
@@ -20,6 +30,13 @@
   height: 750px;
   overflow: hidden;
   perspective: 1200px;
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    height: 550px;
+    perspective: 800px;
+  }
 }
 
 /* ===== Carousel ===== */
@@ -65,4 +82,22 @@
   right: 20px; /* slight offset from edge */
   text-align: center;
   text-anchor: middle;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn.left {
+    left: 10px;
+    margin: 0;
+  }
+
+  .carousel-btn.right {
+    right: 10px;
+    margin: 0;
+  }
 }

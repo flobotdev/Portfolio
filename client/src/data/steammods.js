@@ -75,6 +75,15 @@ export const dayzMods = [
 
 export const dayzCollabMods = [
   {
+    id: "2289461232",
+    name: "Namalsk Survival",
+    description:
+      "Namalsk Survival is a mod that enhances the survival experience on the Namalsk map but also adding fun mechanics like throwing snowballs which was implemented by me. ",
+    image:
+      "https://images.steamusercontent.com/ugc/1652222494894456383/9D6F6842B9BF5576F3F3FE6C05367BDB6B266DDD/",
+    stats: { subscriptions: 1238497 },
+  },
+  {
     id: "1590841260", // Steam Workshop ID
     name: "Trader",
     description:
@@ -100,14 +109,5 @@ export const dayzCollabMods = [
     image:
       "https://images.steamusercontent.com/ugc/1835783750452667773/0320B7B36BA842A62A5D30B687C53CC9C5A2AC77/",
     stats: { subscriptions: 357432 },
-  },
-  {
-    id: "2289461232",
-    name: "Namalsk Survival",
-    description:
-      "Namalsk Survival is a mod that enhances the survival experience on the Namalsk map but also adding fun mechanics like throwing snowballs which was implemented by me. ",
-    image:
-      "https://images.steamusercontent.com/ugc/1652222494894456383/9D6F6842B9BF5576F3F3FE6C05367BDB6B266DDD/",
-    stats: { subscriptions: 1238497 },
   },
 ];

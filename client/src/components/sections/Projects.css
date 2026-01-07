@@ -79,6 +79,17 @@
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
 }
 
+@media (max-width: 768px) {
+  .project-link-btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .project-intro {
   font-size: 1rem;
   color: #2c2c2c;
@@ -90,5 +101,15 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
   }
 }

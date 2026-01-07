@@ -1,7 +1,11 @@
 import "./CarouselCard.css";
 import LinkButton from "../../common/LinkButton";
+import DescriptionModal from "../../common/DescriptionModal";
+import { useState } from "react";
 
 export default function CarouselCard({ mod, offset }) {
+  const [showModal, setShowModal] = useState(false);
+
   // VARIABLES
   const scale = offset === 0 ? 1 : 0.8;
   const zIndex = offset === 0 ? 10 : 5;
@@ -41,6 +45,11 @@ export default function CarouselCard({ mod, offset }) {
       <div className="carousel-card-stats">
         <h3>{mod.name}</h3>
         <p>{mod.description}</p>
+        {mod.description && mod.description.length > 150 && (
+          <button className="see-more-btn" onClick={() => setShowModal(true)}>
+            See More
+          </button>
+        )}
         {mod.stats && (
           <div className="mod-stats">
             <div className="subscriber-badge">
@@ -52,6 +61,13 @@ export default function CarouselCard({ mod, offset }) {
           </div>
         )}
       </div>
+      {showModal && (
+        <DescriptionModal
+          title={mod.name}
+          description={mod.description}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 }

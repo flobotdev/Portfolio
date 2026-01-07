@@ -22,3 +22,14 @@
 .link-button-generic:hover {
   background-color: rgba(27, 40, 56, 0.95);
 }
+
+@media (max-width: 768px) {
+  .link-button-generic {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

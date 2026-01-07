@@ -107,5 +107,18 @@
 @media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-image-container {
+    height: 200px;
   }
 }

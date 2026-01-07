@@ -13,20 +13,21 @@
   border-radius: 9999px;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
-  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: rgb(199, 50, 50);
   transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.16);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
 }
 
 .btn:active {
   transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 .btn:focus-visible {
@@ -37,4 +38,14 @@
 .btn-icon {
   width: 1rem;
   height: 1rem;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    min-height: 44px;
+    width: auto;
+    white-space: nowrap;
+  }
 }

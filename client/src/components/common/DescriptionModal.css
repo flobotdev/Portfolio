@@ -1,0 +1,130 @@
+.description-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  animation: fadeIn 0.2s ease;
+  padding: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.description-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  max-height: 80vh;
+  width: 100%;
+  position: relative;
+  cursor: default;
+  animation: slideUp 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.description-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.description-modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.description-modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(199, 50, 50);
+  margin: 0 0 1.5rem 0;
+  padding-right: 2rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.description-modal-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  overflow-y: auto;
+  flex: 1;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.description-modal-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.description-modal-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.description-modal-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.description-modal-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 768px) {
+  .description-modal-overlay {
+    padding: 1rem;
+  }
+
+  .description-modal-content {
+    padding: 1.5rem;
+    max-height: 85vh;
+  }
+
+  .description-modal-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .description-modal-text {
+    font-size: 0.95rem;
+  }
+}

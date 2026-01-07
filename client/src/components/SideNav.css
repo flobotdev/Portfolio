@@ -14,6 +14,16 @@
   z-index: 1000;
 }
 
+/* Desktop only */
+.desktop-nav {
+  display: flex;
+}
+
+/* Mobile only */
+.mobile-nav {
+  display: none;
+}
+
 .side-nav-top {
   display: flex;
   flex-direction: column;
@@ -151,6 +161,17 @@
 }
 
 /* Mobile hamburger menu */
+.mobile-header {
+  display: none;
+}
+
+.mobile-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  font-family: "IBM Plex Mono", monospace;
+}
+
 .mobile-menu-toggle {
   display: none;
   position: fixed;
@@ -186,20 +207,46 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: flex;
+  .desktop-nav {
+    display: none;
   }
 
-  .side-nav {
-    transform: translateX(-100%);
+  .mobile-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: rgba(224, 216, 195, 0.248);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+
+  .mobile-nav {
+    display: flex;
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
     transition: transform 0.3s ease;
     width: 280px;
     height: 100vh;
     padding: 2rem 1rem 5rem;
     overflow-y: auto;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.08);
   }
 
-  .side-nav.mobile-open {
+  .mobile-nav.mobile-open {
     transform: translateX(0);
   }
 

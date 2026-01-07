@@ -6,6 +6,13 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .experience-header {
   display: flex;
   justify-content: space-between;
@@ -35,6 +42,25 @@
   color: #2c2c2c;
   white-space: nowrap;
   font-weight: 400; /* regular for dates */
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .location {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .dates {
+    white-space: normal;
+    font-size: 0.85rem;
+  }
 }
 
 .experience-category {
