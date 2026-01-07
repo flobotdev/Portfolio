@@ -45,11 +45,9 @@ export default function CarouselCard({ mod, offset }) {
       <div className="carousel-card-stats">
         <h3>{mod.name}</h3>
         <p>{mod.description}</p>
-        {mod.description && mod.description.length > 150 && (
-          <button className="see-more-btn" onClick={() => setShowModal(true)}>
-            See More
-          </button>
-        )}
+        <button className="see-more-btn" onClick={() => setShowModal(true)}>
+          See More
+        </button>
         {mod.stats && (
           <div className="mod-stats">
             <div className="subscriber-badge">
@@ -65,6 +63,7 @@ export default function CarouselCard({ mod, offset }) {
         <DescriptionModal
           title={mod.name}
           description={mod.description}
+          stats={mod.stats}
           onClose={() => setShowModal(false)}
         />
       )}

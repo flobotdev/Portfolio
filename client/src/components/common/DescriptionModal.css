@@ -77,9 +77,45 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: rgb(199, 50, 50);
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   padding-right: 2rem;
   font-family: "IBM Plex Mono", monospace;
+}
+
+.description-modal-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(224, 216, 195, 0.3);
+  border-radius: 8px;
+}
+
+.modal-stats-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.modal-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+}
+
+.modal-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(199, 50, 50);
 }
 
 .description-modal-text {
@@ -121,7 +157,17 @@
 
   .description-modal-title {
     font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .description-modal-stats {
+    gap: 1rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
+  }
+
+  .modal-stat-value {
+    font-size: 1.1rem;
   }
 
   .description-modal-text {
