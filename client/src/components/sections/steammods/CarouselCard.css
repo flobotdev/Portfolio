@@ -2,7 +2,7 @@
 .carousel-card {
   position: absolute;
   top: 0;
-  left: 50%; /* center the card horizontally */
+  left: 50%;
   transform-origin: center center;
   width: 400px;
   min-height: 600px;
@@ -35,18 +35,22 @@
 
 @media (max-width: 768px) {
   .carousel-card {
-    width: 300px;
+    width: 280px;
     min-height: 480px;
   }
 
   .carousel-card.side-left {
-    transform: translateX(-250px) scale(0.75) rotateY(10deg);
+    transform: translateX(calc(-50% - 220px)) scale(0.75) rotateY(10deg);
     opacity: 0.3;
   }
 
   .carousel-card.side-right {
-    transform: translateX(250px) scale(0.75) rotateY(-10deg);
+    transform: translateX(calc(-50% + 220px)) scale(0.75) rotateY(-10deg);
     opacity: 0.3;
+  }
+
+  .carousel-card.main {
+    transform: translateX(-50%) scale(1) rotateY(0deg);
   }
 }
 
